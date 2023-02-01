@@ -1,7 +1,6 @@
 "use strict";
 
 const Sequelize = require("sequelize");
-const process = require("process");
 
 const config = {
     username:"root",
@@ -18,16 +17,6 @@ const sequelize = new Sequelize(
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
-// sequelize
-//     .authenticate()
-//     .catch((err) => {
-//         console.log("Failed to establish database connection: " + err.message);
-//         process.exit();
-//     })
-//     .then(() => {
-//         console.log("Successfully connected to database.");
-//         db.sequelize.sync({force: true})
-//         // db.sequelize.sync({ alter: true });
-//     });
+
 
 module.exports = db;

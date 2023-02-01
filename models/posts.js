@@ -23,6 +23,7 @@ const Post = db.sequelize.define(
         },
         user_id: {
             type: DataTypes.INTEGER,
+            allowNull: false,
         },
         created_at: {
             type: DataTypes.DATE,

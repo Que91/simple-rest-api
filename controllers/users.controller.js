@@ -12,17 +12,17 @@ async function httpUsersGet(req, res, next){
 async function httpGetUserById(req, res, next){
     const id = req.params.id
     try{
-        if(!id) throw Error({ message: 'id is missing'})
+        if(!id) throw Error('id is missing')
         const user = await User.findOne({
             where:{
                 id: id
             }
         })
-        if(!user) throw Error({  message: 'no user found with that id' })
+        if(!user) throw Error('no user found with that id' )
         return res.status(200).json(user)
     }catch (e) {
-        console.log(e.message)
-        res.status(400).send(e.message)
+        console.log(e)
+        res.status(400).send(e)
     }
 }
 async function httpCreateUser(req, res, next){
