@@ -4,7 +4,7 @@ const Sequelize = require("sequelize");
 
 const config = {
     username:"root",
-    password:"Torre$247",
+    password:"password",
     database: "quotum_class",
     host: "127.0.0.1",
     dialect: "mysql",
